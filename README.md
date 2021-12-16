@@ -22,7 +22,7 @@ final output
 
 ```
 Initial user1 and user2
-Initial three token products, and one subscription product
+Initial three token products(1, 2, 3), and one subscription product(4)
 
 User1 buy a token, productId: 1
 User1 buy a token, productId: 2
@@ -44,4 +44,8 @@ after user1 transfer 1000 to user2 (user1 balance < 1000, nothing happen)
 User1 balance: 200
 User2 balance: 400
 All balance: 600
+
+User1 buy a subscription, productId: 4
+After use1 buy subscription, user1 hasSubscription: true
+After use1 buy subscription, user2 hasSubscription: false
 ```
