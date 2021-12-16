@@ -106,3 +106,9 @@ function buySubscribeCallback(data: BuySubscriptionInfo) {
     `User: ${data.userId} buy a ${ProductType.subscription}, productId: ${data.productId}`
   );
 }
+
+// Task 3.8: Design the Webshop class in such a way that it can easily be extended with different product
+// types without having to modify the Webshop class (Open/Closed Design Pattern).
+
+// use dependency injection.
+// predefined the webShopEventBus callbacks(buyTokenCallback, buySubscribeCallback) and productType then injection to webShop
