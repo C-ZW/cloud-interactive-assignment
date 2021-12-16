@@ -27,12 +27,9 @@ export declare class BuyTokenInfo extends Token {
     userId: number;
     constructor(userId: number, amount: number, productId: number);
 }
-export interface BuyTokenInfo {
+export declare class BuySubscriptionInfo extends Subscription {
     userId: number;
-    amount: number;
-}
-export interface BuySubscriptionInfo {
-    userId: number;
+    constructor(userId: number, productId: number);
 }
 export interface TransferInfo {
     sourceId: number;

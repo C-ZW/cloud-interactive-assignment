@@ -10,7 +10,7 @@ export class WebShop {
     this.products = new Map();
   }
 
-  // task: 3.4: The Webshop Class must provide a method to buy a product using buyProduct(userId, productType, productId);
+  // task 3.4: The Webshop Class must provide a method to buy a product using buyProduct(userId, productType, productId);
   buyProduct(userId: number, productType: string, productId: number) {
     const product = this.products.get(productId);
     if (!product) {

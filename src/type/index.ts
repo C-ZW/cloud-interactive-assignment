@@ -51,13 +51,13 @@ export class BuyTokenInfo extends Token {
   }
 }
 
-export interface BuyTokenInfo {
+export class BuySubscriptionInfo extends Subscription {
   userId: number;
-  amount: number;
-}
 
-export interface BuySubscriptionInfo {
-  userId: number;
+  constructor(userId: number, productId: number) {
+    super(productId);
+    this.userId = userId;
+  }
 }
 
 export interface TransferInfo {

@@ -17,7 +17,10 @@ class TokenService {
     }
     /**
      * Task 1.2: Class must provide a method to transfer tokens to another account;
+     * Task 1.5: All actions must not result in inconsistent transfers or balances.
      *
+     * use lock to ensure data consistent
+     * TODO: rollback transaction
      * @param source
      * @param target
      */
@@ -46,6 +49,7 @@ class TokenService {
         this.userBalance.set(targetId, targetAmount + credit);
         this.unlockUser(sourceId);
         this.unlockUser(targetId);
+        // Task 2.5 The Token service (task 1) can publish a event when a transfer has been done
         this.eventBus.publish(type_1.TransferType.transfer, {
             sourceId,
             targetId,

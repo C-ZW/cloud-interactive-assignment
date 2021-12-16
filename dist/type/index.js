@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BuyTokenInfo = exports.Subscription = exports.Token = exports.Product = exports.ProductType = exports.TransferType = void 0;
+exports.BuySubscriptionInfo = exports.BuyTokenInfo = exports.Subscription = exports.Token = exports.Product = exports.ProductType = exports.TransferType = void 0;
 var TransferType;
 (function (TransferType) {
     TransferType["transfer"] = "transfer";
@@ -40,4 +40,11 @@ class BuyTokenInfo extends Token {
     }
 }
 exports.BuyTokenInfo = BuyTokenInfo;
+class BuySubscriptionInfo extends Subscription {
+    constructor(userId, productId) {
+        super(productId);
+        this.userId = userId;
+    }
+}
+exports.BuySubscriptionInfo = BuySubscriptionInfo;
 //# sourceMappingURL=index.js.map

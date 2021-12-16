@@ -7,7 +7,7 @@ class WebShop {
         this.eventBus = eventBus;
         this.products = new Map();
     }
-    // task: 3.4: The Webshop Class must provide a method to buy a product using buyProduct(userId, productType, productId);
+    // task 3.4: The Webshop Class must provide a method to buy a product using buyProduct(userId, productType, productId);
     buyProduct(userId, productType, productId) {
         const product = this.products.get(productId);
         if (!product) {

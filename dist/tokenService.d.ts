@@ -8,7 +8,10 @@ export declare class TokenService {
     constructor(userStore: RetriveStorage<number, User>, eventBus: IEventBus);
     /**
      * Task 1.2: Class must provide a method to transfer tokens to another account;
+     * Task 1.5: All actions must not result in inconsistent transfers or balances.
      *
+     * use lock to ensure data consistent
+     * TODO: rollback transaction
      * @param source
      * @param target
      */

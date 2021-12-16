@@ -21,6 +21,9 @@ node ./dist/index.js
 final output
 
 ```
+Initial user1 and user2
+Initial three token products, and one subscription product
+
 User1 buy a token, productId: 1
 User1 buy a token, productId: 2
 User1 balance: 300

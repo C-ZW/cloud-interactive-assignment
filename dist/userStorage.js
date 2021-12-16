@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserStorage = void 0;
+/**
+ * UserStorage provide basic register and retrive user.
+ */
 class UserStorage {
     constructor() {
         this.users = new Map();
