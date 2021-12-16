@@ -13,7 +13,6 @@ const user1 = new userModel_1.User(1, "user1", false);
 const user2 = new userModel_1.User(2, "user2", false);
 userStorage.register(user1);
 userStorage.register(user2);
-// initial
 const tokenServiceEventBus = new eventBus_1.EventBus();
 tokenServiceEventBus.subscribe(type_1.TransferType.transfer, transferCallback);
 const tokenService = new tokenService_1.TokenService(userStorage, tokenServiceEventBus);
@@ -65,6 +64,10 @@ function buySubscribeCallback(data) {
     if (user !== undefined) {
         user.hasSubscription = true;
     }
-    console.log(`User: ${data.userId} buy a ${type_1.ProductType.subscription}, productId: ${data.productId}`);
+    console.log(`User${data.userId} buy a ${type_1.ProductType.subscription}, productId: ${data.productId}`);
 }
+// Task 3.8: Design the Webshop class in such a way that it can easily be extended with different product
+// types without having to modify the Webshop class (Open/Closed Design Pattern).
+// use dependency injection.
+// predefined the webShopEventBus callbacks(buyTokenCallback, buySubscribeCallback) and productType then injection to webShop
 //# sourceMappingURL=index.js.map

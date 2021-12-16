@@ -103,7 +103,7 @@ function buySubscribeCallback(data: BuySubscriptionInfo) {
     user.hasSubscription = true;
   }
   console.log(
-    `User: ${data.userId} buy a ${ProductType.subscription}, productId: ${data.productId}`
+    `User${data.userId} buy a ${ProductType.subscription}, productId: ${data.productId}`
   );
 }
 
